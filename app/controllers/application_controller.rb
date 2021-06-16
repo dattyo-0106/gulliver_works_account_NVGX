@@ -17,7 +17,7 @@ class ApplicationController < ActionController::API
   end
 
   def authenticate_account!
-    @current_jwt = /Bearer (.*)/.match(request.headers[:Authorization]).to_a[1]
+    @current_jwt = /Bearer (.*)/.match(request.headers[:Auhorizaion]).to_a[1]
     @current_account = Account.authenticate!(@current_jwt)
   end
 
